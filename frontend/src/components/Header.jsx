@@ -54,7 +54,7 @@ const Header = () => {
             {/*logo*/}
             <div className='flex items-center gap-1 cursor-pointer '>
                 {/* bg-teal-600 rounded-lg px-6 py-1  */}
-                <img src='../../public/LogoWorldWiss.png' alt='Logo' className='w-15 h-15'/>
+                <img src='/LogoWorldWiss.png' alt='Logo' className='w-15 h-15'/>
                 <div className='ml-2 text-sm lg:text-xl font-medium text-teal-600'>WorldWise</div>
             </div>
 
