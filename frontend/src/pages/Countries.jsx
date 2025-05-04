@@ -100,9 +100,8 @@ const Countries = () => {
         {
           method: isFavorited ? 'DELETE' : 'POST',
           credentials: 'include',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
           ...(isFavorited
             ? {} // no body for DELETE
             : { body: JSON.stringify({ countryCode }) }),
@@ -132,6 +131,7 @@ const Countries = () => {
     try {
       const res = await fetch('https://countryapis-backend.onrender.com/getfavorites', {
         method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
       });
       const data = await res.json();
