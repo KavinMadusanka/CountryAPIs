@@ -42,7 +42,8 @@ const Signup = () => {
         const res = await fetch('https://countryapis-backend.onrender.com/api/v1/auth/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(userData)
+            body: JSON.stringify(userData),
+            credentials: 'include',
           });
         const data = await res.json();
         console.log(data);

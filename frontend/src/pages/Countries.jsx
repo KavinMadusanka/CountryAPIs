@@ -99,7 +99,7 @@ const Countries = () => {
         `https://countryapis-backend.onrender.com/favorites${isFavorited ? `/${countryCode}` : ''}`,
         {
           method: isFavorited ? 'DELETE' : 'POST',
-          // credentials: 'include',
+          credentials: 'include',
           headers: {
             'Content-Type': 'application/json',
           },
