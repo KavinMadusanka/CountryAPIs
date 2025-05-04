@@ -11,6 +11,7 @@ import Signup from './pages/Signup.jsx';
 import SignIn from './pages/SignIn.jsx';
 import CountryDetailsPage from './pages/CountryDetailsPage.jsx';
 import Homepage from './pages/Homepage';
+import OurService from './pages/OurService.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
             <Route path="/Countries" element={< Countries/> } />
             <Route path="/Signup" element={< Signup/> } />
             <Route path="/SignIn" element={< SignIn/> } />
+            <Route path="/Service" element={< OurService/> } />
             <Route path="/country-details/:countryCode" element={<CountryDetailsPage />} />
           </Routes>
         </div>
