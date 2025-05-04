@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import connectDB from './config/db.js';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import authRouter from './routes/authRoute.js';
 // import session from 'express-session'; // You can uncomment if you use sessions
 
