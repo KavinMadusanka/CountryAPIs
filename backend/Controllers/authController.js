@@ -93,7 +93,7 @@ export const loginController = async (req, res) => {
         // Set cookie and send response
         res.status(200).cookie('access_token', token, {
             httpOnly: true,
-            secure: false,  // set to false for local testing (ensure HTTPS is used in production)
+            secure: true,  // set to false for local testing (ensure HTTPS is used in production)
             sameSite: 'None',
         }).send({
             success: true,
