@@ -1,6 +1,6 @@
-import { Layout } from 'lucide-react';
 import React from 'react';
 import { FaGlobe, FaUsers, FaChartLine } from 'react-icons/fa';
+import Layout from '../components/Layout';
 
 const services = [
   {
