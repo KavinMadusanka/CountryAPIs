@@ -19,8 +19,8 @@ const Header = () => {
             const res = await fetch('http://localhost:8070/api/v1/auth/Signout', {
                 method: 'POST',
                 credentials: 'include',
-                // headers: { 'Content-Type': 'application/json' },
-                // withCredentials: true,
+                headers: { 'Content-Type': 'application/json' },
+                withCredentials: true,
               });
               const data = await res.json();
             console.log('herder');
