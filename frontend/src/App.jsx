@@ -9,8 +9,9 @@ import AboutUs from './pages/AboutUs.jsx';
 import Countries from './pages/Countries.jsx';
 import Signup from './pages/Signup.jsx';
 import SignIn from './pages/SignIn.jsx';
-import Homepage from './pages/homepage.jsx';
+import Homepage from '';
 import CountryDetailsPage from './pages/CountryDetailsPage.jsx';
+import Homepage from './pages/Homepage';
 
 function App() {
   const [count, setCount] = useState(0)
