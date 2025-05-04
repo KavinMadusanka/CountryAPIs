@@ -16,7 +16,7 @@ const Header = () => {
     const handleLogout = async () => {
         try {
             console.log('first')
-            const res = await fetch('http://localhost:8070/api/v1/auth/Signout', {
+            const res = await fetch('https://countryapis-backend.onrender.com/api/v1/auth/Signout', {
                 method: 'POST',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },
