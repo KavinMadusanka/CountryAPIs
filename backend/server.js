@@ -15,23 +15,22 @@ connectDB();
 
 const app = express();
 
-// ✅ CORS Setup — Allow frontend hosted on Render
 const allowedOrigins = [
-  'http://localhost:5173',
-  'https://countryapis-frontend.onrender.com',
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin like mobile apps or curl
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true, // Required for cookies or auth headers
-}));
+    'http://localhost:5173',
+    'https://countryapis-frontend.onrender.com'
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  }));
+  
 
 // Middleware
 app.use(express.json());
