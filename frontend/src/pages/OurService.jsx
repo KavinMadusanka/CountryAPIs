@@ -29,9 +29,9 @@ const OurService = () => {
             <p className="text-gray-600 text-lg">Explore the core services we offer to empower your global knowledge journey.</p>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 z-15">
             {services.map((service, index) => (
-            <div key={index} className="bg-white border border-gray-100 rounded-xl shadow-md p-6 text-center transition-transform hover:scale-105 hover:shadow-lg">
+            <div key={index} className="bg-white border border-gray-100 rounded-xl shadow-md p-6 text-center transition-transform hover:scale-105 hover:shadow-lg z-10">
                 <div className="mb-4 flex justify-center">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-teal-700 mb-2">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
