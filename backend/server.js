@@ -15,6 +15,12 @@ connectDB();
 
 const app = express();  
 
+app.use(cors({
+    origin: 'https://countryapis-frontend.onrender.com', // The domain of your frontend
+    methods: 'GET,POST', // Allowed methods
+    allowedHeaders: 'Content-Type,Authorization', // Allow these headers
+  }));
+
 // Middleware
 app.use(express.json());
 app.use(morgan('dev'));
