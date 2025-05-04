@@ -39,7 +39,7 @@ const Signup = () => {
     const { confirmPassword, ...userData } = formData; // Remove confirmPassword before sending
 
     try {
-        const res = await fetch('http://localhost:8070/api/v1/auth/register', {
+        const res = await fetch('https://countryapis-backend.onrender.com/api/v1/auth/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)

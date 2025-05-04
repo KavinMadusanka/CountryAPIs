@@ -96,7 +96,7 @@ const Countries = () => {
   
     try {
       const res = await fetch(
-        `http://localhost:8070/api/v1/auth/favorites${isFavorited ? `/${countryCode}` : ''}`,
+        `https://countryapis-backend.onrender.com/favorites${isFavorited ? `/${countryCode}` : ''}`,
         {
           method: isFavorited ? 'DELETE' : 'POST',
           credentials: 'include',
@@ -130,7 +130,7 @@ const Countries = () => {
 
   const fetchUserFavorites = async () => {
     try {
-      const res = await fetch('http://localhost:8070/api/v1/auth/getfavorites', {
+      const res = await fetch('https://countryapis-backend.onrender.com/getfavorites', {
         method: 'GET',
         credentials: 'include',
       });
