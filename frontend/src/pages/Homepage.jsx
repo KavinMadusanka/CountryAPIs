@@ -20,7 +20,7 @@ const Homepage = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-600 dark:text-teal-100">
                     Travel smarter with <br/>
                     <div className='flex items-center gap-2'>
-                    <img src='../../public/LogoWorldWiss.png' alt='Logo' className='w-10 h-10' />
+                    <img src='/LogoWorldWiss.png' alt='Logo' className='w-10 h-10' />
                     <span className="text-teal-600">WorldWise</span> —
                     </div>
                     your guide to global discovery.
