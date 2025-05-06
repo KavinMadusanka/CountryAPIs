@@ -60,45 +60,47 @@ const Signup = () => {
         }
     };
 
-  return (
-    <Layout>
-      <div className="min-h-screen flex items-center justify-center bg-teal-50 px-4">
-        <form onSubmit={handleSubmit} className="bg-white/60 p-8 rounded-lg shadow-md max-w-md w-full space-y-4 z-1 ">
-          <h2 className="text-2xl font-bold text-teal-600 text-center">Sign Up</h2>
-
-          {['name', 'email', 'password', 'confirmPassword', 'address', 'contactNumber'].map(field => (
-            <div key={field}>
-              <input
-                type={(field === 'password' || field === 'confirmPassword') ? 'password' : 'text'}
-                name={field}
-                placeholder={
-                  field === 'confirmPassword' ? 'Re-enter Password' : field.charAt(0).toUpperCase() + field.slice(1)
-                }
-                value={formData[field]}
-                onChange={handleChange}
-                required
-                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-300 ${
-                  field === 'confirmPassword' && !passwordMatch ? 'border-red-500' : ''
-                }`}
-              />
-              {field === 'confirmPassword' && !passwordMatch && (
-                <p className="text-red-500 text-sm mt-1">Passwords do not match</p>
-              )}
-            </div>
-          ))}
-
-          <button
-            type="submit"
-            disabled={!passwordMatch}
-            className={`w-full text-sm lg:text-xl font-medium py-2 rounded transition 
-              ${passwordMatch ? 'bg-teal-600 text-white hover:bg-teal-700' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
-          >
-            Register
-          </button>
-        </form>
-      </div>
-    </Layout>
-  );
-};
-
-export default Signup;
+    return (
+      <Layout>
+        <div className="min-h-screen flex items-center justify-center px-4">
+          <form onSubmit={handleSubmit} className="bg-white/60 dark:bg-gray-900/90 p-8 rounded-lg shadow-md max-w-md w-full space-y-4 z-1 ">
+            <h2 className="text-2xl font-bold text-teal-600 text-center">Sign Up</h2>
+  
+            {['name', 'email', 'password', 'confirmPassword', 'address', 'contactNumber'].map(field => (
+              <div key={field}>
+                <input
+                  type={(field === 'password' || field === 'confirmPassword') ? 'password' : 'text'}
+                  name={field}
+                  placeholder={
+                    field === 'confirmPassword' ? 'Re-enter Password' : field.charAt(0).toUpperCase() + field.slice(1)
+                  }
+                  value={formData[field]}
+                  onChange={handleChange}
+                  required
+                  className={`w-full p-3 border dark:text-teal-100 rounded-md focus:ring-2 focus:ring-teal-300 ${
+                    field === 'confirmPassword' && !passwordMatch ? 'border-red-500' : ''
+                  }`}
+                />
+                {field === 'confirmPassword' && !passwordMatch && (
+                  <p className="text-red-500 text-sm mt-1">Passwords do not match</p>
+                )}
+              </div>
+            ))}
+  
+            <button
+              type="submit"
+              disabled={!passwordMatch}
+              className={`w-full text-sm lg:text-xl font-medium py-2 rounded transition 
+                ${passwordMatch ? 'bg-teal-600 text-white hover:bg-teal-700 dark:text-teal-100 dark:bg-teal-800 dark:hover:bg-teal-900' 
+                  : 'bg-gray-300 dark:bg-teal-100 text-gray-500 cursor-not-allowed'}`}
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </Layout>
+    );
+  };
+  
+  export default Signup;
+  

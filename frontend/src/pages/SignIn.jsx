@@ -64,8 +64,8 @@ const SignIn = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-teal-50 flex justify-center items-center px-4">
-        <div className="bg-white/60 p-8 rounded-lg shadow-md w-full max-w-md z-1">
+      <div className="min-h-screen flex justify-center items-center px-4">
+        <div className="bg-white/60 dark:bg-gray-900/90 p-8 rounded-lg shadow-md w-full max-w-md z-1">
           <h2 className="text-2xl font-bold text-teal-600 text-center mb-6">Sign In</h2>
 
           <form onSubmit={handleSubmit} className="space-y-4 z-1">
@@ -75,7 +75,7 @@ const SignIn = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-300"
+                className="w-full dark:text-teal-100 p-3 border rounded-md focus:ring-2 focus:ring-gray-300"
                 placeholder="Email"
                 required
               />
@@ -87,7 +87,7 @@ const SignIn = () => {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-300"
+                className="w-full p-3 dark:text-teal-100 border rounded-md focus:ring-2 focus:ring-gray-300"
                 placeholder="Password"
                 required
               />
@@ -97,8 +97,8 @@ const SignIn = () => {
               type="submit"
               className={`w-full text-sm lg:text-xl font-medium py-2 rounded transition ${
                 loading
-                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                  : 'bg-teal-600 text-white hover:bg-teal-700'
+                  ? 'bg-gray-300 text-gray-500 dark:bg-teal-100 cursor-not-allowed'
+                  : 'bg-teal-600 text-white hover:bg-teal-700 dark:text-teal-100 dark:bg-teal-800 dark:hover:bg-teal-900' 
               }`}
               disabled={loading}
             >
@@ -106,7 +106,7 @@ const SignIn = () => {
             </button>
           </form>
 
-          <p className="mt-4 text-center text-sm text-gray-600">
+          <p className="mt-4 text-center text-sm text-gray-600 dark:text-teal-100">
             Don't have an account?{' '}
             <a href="/signup" className="text-teal-600 hover:underline">Sign Up</a>
           </p>
